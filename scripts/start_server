@@ -1,6 +1,6 @@
 #!/bin/bash
 service httpd start
-cd /var/www/
+cd /var/www/html/src
 yarn build
 pm2 start yarn --name "demo-codepipeline" --interpreter bash -- dev
 pm2 startup
