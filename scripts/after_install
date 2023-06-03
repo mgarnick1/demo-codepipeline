@@ -1,5 +1,5 @@
 #!/bin/bash
-
+rm -rf /var/www/html/*
 # navigate to app folder
 cd /var/www/html/
 
