@@ -1,9 +1,8 @@
 #!/bin/bash
 # navigate to app folder
 cd /var/www/
-rm yarn.lock
 
-rm -rf node_modules
+
 # install dependencies
 yarn install
 
