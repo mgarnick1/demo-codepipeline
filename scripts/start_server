@@ -2,6 +2,7 @@
 service httpd start
 cd /var/www/html/
 yarn build
+cd /var/www/html/dist/
 pm2 start "yarn start" --name demo-codepipeline
 pm2 startup
 pm2 save
