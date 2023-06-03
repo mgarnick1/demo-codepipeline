@@ -2,11 +2,8 @@
 # navigate to app folder
 cd /var/www/
 
-
 # install dependencies
 yarn install
-
-
 
 # install pm2 process manager
 yarn global add pm2
