@@ -1,8 +1,9 @@
 #!/bin/bash
 service httpd start
-cd /var/www/
-# yarn build
-pm2 start yarn --name "demo-codepipeline" --interpreter bash -- build
+cd /var/www/html/
+yarn build
+cd /var/www/html/dist/
+pm2 start yarn --name "demo-codepipeline" --interpreter bash -- dev
 pm2 startup
 pm2 save
 pm2 restart all
