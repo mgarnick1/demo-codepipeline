@@ -3,7 +3,7 @@
 cd /var/www/html/
 
 # install dependencies
-yarn install
+yarn install --ignore-engines
 
 # install pm2 process manager
 yarn global add pm2
