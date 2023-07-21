@@ -1,13 +1,6 @@
 # Do not change version. This is the version of aws buildspec, not the version of your buldspec file.
 version: 0.2
 phases:
-  install: 
-    runtime-versions:
-        nodejs: 18
-    commands: 
-    - apt-get update 
-    - apt-get install build-essential libssl-dev
-    - curr_dir=$(pwd)
   pre_build:
     commands:
       #installs dependencies into the node_modules/ directory
