@@ -3,7 +3,6 @@
 - mkdir -p $NVM_DIR
 - cd $(mktemp -d) 
 - . $NVM_DIR/nvm.sh 
-- cd $CODEBUILD_SRC_DIR
 //Replace the version number with the version you needed. 
 - nvm install 18 
 - nvm use 18 //If you install multiple version of NVM command then you need use this command to use particular version.
