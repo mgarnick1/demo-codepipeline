@@ -5,7 +5,8 @@ phases:
     commands:
       #installs dependencies into the node_modules/ directory
       - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-      - bash scripts/codebuild_nvm.sh
+      - nvm install 18
+      - nvm use 18
       - node -v
       - yarn install
   build:
