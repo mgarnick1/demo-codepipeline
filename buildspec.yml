@@ -4,6 +4,10 @@ phases:
   install: 
     commands: 
       - n 16.19.0
+      - node -v
+      - npm update -g npm
+      - npm install -g yarn
+      - yarn -v
   pre_build:
     commands:
       #installs dependencies into the node_modules/ directory
