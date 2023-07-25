@@ -1,12 +1,18 @@
 # Do not change version. This is the version of aws buildspec, not the version of your buldspec file.
 version: 0.2
 phases:
+  install: 
+    commands: 
+      - echo installing nvm....
+      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+      - export NVM_DIR="$HOME/.nvm"
+      - '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
+      - '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'  
   pre_build:
     commands:
       #installs dependencies into the node_modules/ directory
-      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-      - nvm install 18
-      - nvm use 18
+      - . "$NVM_DIR/nvm.sh" && nvm install 16 && echo "node installed "
+      - echo installing node
       - node -v
       - yarn install
   build:
